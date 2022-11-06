@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "category": "childrens",
+      "title": "dress",
+      "model": "spring holliday",
+      "description": "dhhdhdh djjjdjdjdj dhhdhhd dkddk ckkvkfkf llls",
+      "price": 22345,
+      "img1": "https://store.churchofjesuschrist.org/wcsimages/LDSCAS/products/2021:%20April/85051268_446486500_000_p_348.png",
+      "img2": "https://i.pinimg.com/564x/77/f0/a1/77f0a1508bb5669d898f4249f231b629.jpg",
+      "img3": "https://zazacouture.com/image/cache/catalog/LETO%202020%20ZAZA/F1304-500x600.jpg",
+      "id": 9
+    },
+    {
+      "category": "childrens",
+      "title": "dress",
+      "model": "cute",
+      "description": "edit",
+      "price": "34000",
+      "img1": "https://i.pinimg.com/236x/7e/53/44/7e53440b9ea3afc43f4fe6e021dde6c8.jpg",
+      "img2": "https://i.pinimg.com/564x/32/fa/ea/32faea5142d189061d4ff85c4dc98959.jpg",
+      "img3": "https://i.pinimg.com/564x/32/fa/ea/32faea5142d189061d4ff85c4dc98959.jpg",
+      "id": 10
+    },
+    {
+      "category": "femail",
+      "title": "dresses",
+      "model": "Topman puffer jacket in blue",
+      "description": "ddd",
+      "price": 40000,
+      "img1": "https://media.boohoo.com/i/boohoo/gzz18792_khaki_xl?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img2": "https://media.boohoo.com/i/boohoo/gzz18792_khaki_xl_1?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img3": "https://media.boohoo.com/i/boohoo/gzz18792_khaki_xl_2?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "id": 11
+    }
+  ]
+}
