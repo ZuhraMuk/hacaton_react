@@ -32,6 +32,28 @@
       "img2": "https://media.boohoo.com/i/boohoo/gzz26591_hot%20pink_xl_1/female-hot%20pink-premium-bandage-midi-skirt",
       "img3": "https://media.boohoo.com/i/boohoo/gzz26591_hot%20pink_xl_3/female-hot%20pink-premium-bandage-midi-skirt",
       "id": 12
+    },
+    {
+      "category": "femail",
+      "title": "dress",
+      "model": "SEQUIN MINI SKIRT",
+      "description": "Wanna make a statement? Shine like the star you are in this sequin skirt. Perfect for all upcoming nights out and party celebrations, a sequin skirt is a wardrobe staple that can be worn year on year without fail. Because who doesn’t love a sequin or two? Pair with statement heels and a matching bodysuit and you’re ready to shine, girl. From sequin mini skirts to midi styles, we’ve got it all…because you can never have too much sparkle in your life, right?  95% Polyester 5% Elastane. Model wears size 10.",
+      "price": 300000,
+      "img1": "https://media.boohoo.com/i/boohoo/gzz19854_green_xl_1/female-green-sequin-mini-skirt?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img2": "https://media.boohoo.com/i/boohoo/gzz19854_green_xl/womens-green-sequin-mini-skirt?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img3": "https://media.boohoo.com/i/boohoo/gzz19854_green_xl_2/female-green-sequin-mini-skirt?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "id": 13
+    },
+    {
+      "category": "male",
+      "title": " HOODIE",
+      "model": "OVERSIZED TIGER GRAPHIC",
+      "description": "Wanna keep things comfy? Jump on the oversized trend with this men's oversized hoodie from our latest collection. With a relaxed fit and a hood attached to the neckline, we're talking all over comfort all. season. long. Wear with joggers and slides for off-duty days or team with paint splatter jeans and a shacket for a look we love.  50% Cotton (25% is Recycled), 50% Polyester (25% is Recycled). Model is 6'11 And Wears Size M",
+      "price": 22000,
+      "img1": "https://media.boohoo.com/i/boohoo/bmm23058_charcoal_xl_1/male-charcoal-oversized-tiger-graphic-hoodie?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img2": "https://media.boohoo.com/i/boohoo/bmm23058_charcoal_xl/mens-charcoal-oversized-tiger-graphic-hoodie?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img3": "https://media.boohoo.com/i/boohoo/bmm23058_charcoal_xl_3/male-charcoal-oversized-tiger-graphic-hoodie?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "id": 14
     }
   ]
 }

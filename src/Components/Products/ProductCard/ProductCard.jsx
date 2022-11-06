@@ -16,13 +16,29 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
+import { basketContext } from "../../../context/BasketContextProvider";
 
 const ProductCard = ({ obj }) => {
+  const { addProductToBasket } = React.useContext(basketContext);
+
+  function avatar() {
+    switch (obj.category[0]) {
+      case "f":
+        return "red";
+
+      case "m":
+        return "blue";
+
+      default:
+        return "green";
+    }
+  }
+
   return (
     <Card sx={{ maxWidth: 300 }} id="card_active">
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: blue[500] }} aria-label="recipe">
+          <Avatar style={{ backgroundColor: avatar() }} aria-label="recipe">
             {obj.category[0].toUpperCase()}
           </Avatar>
         }
@@ -51,7 +67,7 @@ const ProductCard = ({ obj }) => {
         <IconButton aria-label="add to favorites">
           <BookmarkBorderIcon />
         </IconButton>
-        <IconButton aria-label="share">
+        <IconButton aria-label="share" onClick={() => addProductToBasket(obj)}>
           <AddShoppingCartIcon />
         </IconButton>
       </CardActions>

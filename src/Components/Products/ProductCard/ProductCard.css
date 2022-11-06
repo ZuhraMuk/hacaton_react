@@ -12,3 +12,11 @@
   -webkit-box-shadow: 7px -8px 18px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 7px -8px 18px -4px rgba(0, 0, 0, 0.75);
 }
+.green {
+  background-color: rgb(10, 171, 10) !important;
+  color: black !important;
+}
+.red {
+  background-color: orangered !important;
+  color: white !important;
+}
