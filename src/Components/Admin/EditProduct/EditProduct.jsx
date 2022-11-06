@@ -53,7 +53,7 @@ const EditProduct = () => {
 
   return (
     <>
-      <h2 id="add-title">Редактирование товара</h2>
+      <h2 id="add-title">Product editing</h2>
       <form id="form-add" onSubmit={e => handleSave(e)}>
         <FormControl sx={{ m: 1 }}>
           <InputLabel id="demo-simple-select-autowidth-label">

@@ -16,9 +16,12 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import Button from "@mui/material/Button";
 import SortIcon from "@mui/icons-material/Sort";
 import { Link, useLocation } from "react-router-dom";
+import { basketContext } from "../../context/BasketContextProvider";
 
 function NavBar() {
   const location = useLocation();
+
+  const { basketCount } = React.useContext(basketContext);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -80,14 +83,19 @@ function NavBar() {
       }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}>
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <AddShoppingCartIcon />
-          </Badge>
-        </IconButton>
-        <p>my cart</p>
-      </MenuItem>
+      <Link to="/basket" style={{ color: "black" }}>
+        <MenuItem onClick={handleMenuClose}>
+          <IconButton
+            size="large"
+            aria-label="show 4 new mails"
+            color="inherit">
+            <Badge badgeContent={basketCount} color="error">
+              <AddShoppingCartIcon />
+            </Badge>
+          </IconButton>
+          <p>my cart</p>
+        </MenuItem>
+      </Link>
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
@@ -158,7 +166,7 @@ function NavBar() {
             sx={{ display: { xs: "none", sm: "block" } }}>
             Z&A
           </Typography>
-          <LiveSearch />
+          {location.pathname == "/list" ? <LiveSearch /> : null}
           <Box
             sx={{
               display: "flex",
@@ -176,14 +184,16 @@ function NavBar() {
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit">
-              <Badge badgeContent={4} color="error">
-                <AddShoppingCartIcon />
-              </Badge>
-            </IconButton>
+            <Link to="/basket">
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit">
+                <Badge badgeContent={basketCount} color="error">
+                  <AddShoppingCartIcon />
+                </Badge>
+              </IconButton>
+            </Link>
             <IconButton
               size="large"
               aria-label="show 17 new notifications"

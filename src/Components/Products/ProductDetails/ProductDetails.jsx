@@ -18,7 +18,7 @@ import "./ProductDetails.css";
 import SwiperCore, { Thumbs } from "swiper";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { AddShoppingCart } from "@mui/icons-material";
-// import { basketContext } from "../../../context/BasketContextProvider";
+import { basketContext } from "../../../context/BasketContextProvider";
 
 SwiperCore.use([Thumbs]);
 
@@ -27,6 +27,9 @@ const ProductDetails = () => {
 
   const { readOneProduct, productDetails, deleteProduct } =
     useContext(productContext);
+
+  const { addProductToBasket } = useContext(basketContext);
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -104,8 +107,7 @@ const ProductDetails = () => {
                     variant="contained"
                     color="warning"
                     sx={{ marginLeft: "20px" }}
-                    // onClick={() => addProductToBasket(productDetails)}
-                  >
+                    onClick={() => addProductToBasket(productDetails)}>
                     <AddShoppingCart />
                   </Button>
                 </Alert>

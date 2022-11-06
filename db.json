@@ -12,17 +12,6 @@
       "id": 9
     },
     {
-      "category": "childrens",
-      "title": "dress",
-      "model": "cute",
-      "description": "edit",
-      "price": "34000",
-      "img1": "https://i.pinimg.com/236x/7e/53/44/7e53440b9ea3afc43f4fe6e021dde6c8.jpg",
-      "img2": "https://i.pinimg.com/564x/32/fa/ea/32faea5142d189061d4ff85c4dc98959.jpg",
-      "img3": "https://i.pinimg.com/564x/32/fa/ea/32faea5142d189061d4ff85c4dc98959.jpg",
-      "id": 10
-    },
-    {
       "category": "femail",
       "title": "dresses",
       "model": "Topman puffer jacket in blue",
@@ -32,6 +21,17 @@
       "img2": "https://media.boohoo.com/i/boohoo/gzz18792_khaki_xl_1?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
       "img3": "https://media.boohoo.com/i/boohoo/gzz18792_khaki_xl_2?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
       "id": 11
+    },
+    {
+      "category": "femail",
+      "title": "Dress",
+      "model": "PREMIUM BANDAGE MIDI SKIRT",
+      "description": "Wanna bring the heat? Look fire from the ground up in this flattering midi skirt. Sitting midway down the calf and skimming your hips for a flattering fit, mid-length skirts are the wardrobe hero you need in your life this season. This on-trend piece is your go-to style for versatility, and is renowned for its complimentary fit. Just pair with trainers for the perfect casual look, or swap out your flats for heels and your Saturday night glam is sorted.  95% Polyester and 5% Elastane. Machine Washable. Model Wears UK Size 10",
+      "price": "504000",
+      "img1": "https://media.boohoo.com/i/boohoo/gzz26591_hot%20pink_xl/womens-hot%20pink-premium-bandage-midi-skirt?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img2": "https://media.boohoo.com/i/boohoo/gzz26591_hot%20pink_xl_1/female-hot%20pink-premium-bandage-midi-skirt",
+      "img3": "https://media.boohoo.com/i/boohoo/gzz26591_hot%20pink_xl_3/female-hot%20pink-premium-bandage-midi-skirt",
+      "id": 12
     }
   ]
 }

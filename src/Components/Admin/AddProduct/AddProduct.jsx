@@ -136,21 +136,21 @@ const AddProduct = () => {
         />
         <TextField
           className="outlined-basic"
-          label="Фото 1"
+          label="img1"
           variant="outlined"
           value={img1}
           onChange={e => setImg1(e.target.value)}
         />
         <TextField
           className="outlined-basic"
-          label="Фото 2"
+          label="img2"
           variant="outlined"
           value={img2}
           onChange={e => setImg2(e.target.value)}
         />
         <TextField
           className="outlined-basic"
-          label="Фото 3"
+          label="img3"
           variant="outlined"
           value={img3}
           onChange={e => setImg3(e.target.value)}
