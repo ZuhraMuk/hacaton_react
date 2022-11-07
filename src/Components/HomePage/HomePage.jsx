@@ -20,7 +20,7 @@ const HomePage = () => {
             style={{
               width: 250,
               backgroundColor: "#f8fafd",
-              borderTop: "10px solid #f9d9d9",
+              borderTop: "10px solid #a7b4b9",
             }}>
             <img
               src="https://gcontent.robertsonmarketing.com/store/20160512512/assets/themes/theme1_en/images/home/aug19/YouTube_Collection_March_2022.png"
@@ -41,7 +41,7 @@ const HomePage = () => {
             style={{
               width: 250,
               backgroundColor: "#f8fafd",
-              borderTop: "10px solid #fcb6b9",
+              borderTop: "10px solid #b5c2d3",
             }}>
             <img
               src="https://cdna.lystit.com/1040/1300/n/photos/ayzedclothing/e8030a74/c-p-company--Full-Zip-Google-Hoodie-Mint-Green.jpeg"
@@ -62,7 +62,7 @@ const HomePage = () => {
             style={{
               width: 250,
               backgroundColor: "#f8fafd",
-              borderTop: "10px solid #f26d7e",
+              borderTop: "10px solid #7b93bd",
             }}>
             <img
               src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEYXXX2043.webp"
@@ -83,7 +83,7 @@ const HomePage = () => {
             style={{
               width: 250,
               backgroundColor: "#f8fafd",
-              borderTop: "10px solid #e41047",
+              borderTop: "10px solid #2d6ab5",
             }}>
             <img
               src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEYXXX1801.jpg"

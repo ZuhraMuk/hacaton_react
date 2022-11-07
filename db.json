@@ -16,7 +16,7 @@
       "title": "dresses",
       "model": "Topman puffer jacket in blue",
       "description": "ddd",
-      "price": 40000,
+      "price": "22300",
       "img1": "https://media.boohoo.com/i/boohoo/gzz18792_khaki_xl?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
       "img2": "https://media.boohoo.com/i/boohoo/gzz18792_khaki_xl_1?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
       "img3": "https://media.boohoo.com/i/boohoo/gzz18792_khaki_xl_2?w=614&h=902&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
@@ -54,6 +54,61 @@
       "img2": "https://media.boohoo.com/i/boohoo/bmm23058_charcoal_xl/mens-charcoal-oversized-tiger-graphic-hoodie?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
       "img3": "https://media.boohoo.com/i/boohoo/bmm23058_charcoal_xl_3/male-charcoal-oversized-tiger-graphic-hoodie?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
       "id": 14
+    },
+    {
+      "category": "femail",
+      "title": "dress",
+      "model": "LACE TRIM SATIN PYJAMA SHIRT & TROUSER SET",
+      "description": "Make night-time extra cosy in these soft pyjamas. Our full range of women's pyjama sets let's you take your pick from cute animal prints, silky satin pyjamas and sultry matching cami and short sets. Go ahead and have a lazy duvet day, just grab a pair of fluffy pyjamas to see you through. Staying in just got all the more appealing with our pjs, girl - you can never have too many.  100% Polyester. Machine Wash. Model wears UK Size 10.",
+      "price": 30000,
+      "img1": "https://media.boohoo.com/i/boohoo/gzz26362_blush_xl/womens-blush-lace-trim-satin-pyjama-shirt-&-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img2": "https://media.boohoo.com/i/boohoo/gzz26362_blush_xl_1/female-blush-lace-trim-satin-pyjama-shirt-&-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img3": "https://media.boohoo.com/i/boohoo/gzz26362_blush_xl_2/female-blush-lace-trim-satin-pyjama-shirt-&-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "id": 15
+    },
+    {
+      "category": "femail",
+      "title": "dress",
+      "model": "DISNEY MICKEY MOUSE BUTTON UP PYJAMA TROUSER",
+      "description": "Who said Disney is just for kids? These women’s Disney pyjamas are perfect for anyone who is Disney-obsessed. Designed with the iconic prints and characters that we all know and love, our Disney nightwear collection is perfect for keeping comfy and cosy. From Mickey and Minnie designs to The Lion King and Alice In Wonderland, we’ve got it all covered. Whether you wanna look cute for sleepovers or just want a fun addition to your pyjama drawer, these pjs are about to become your new favourites.  100% Polyester. Machine Washable. Model wears size 10.",
+      "price": 129345,
+      "img1": "https://media.boohoo.com/i/boohoo/gzz27719_grey_xl_1/female-grey-disney-mickey-mouse-button-up-pyjama-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img2": "https://media.boohoo.com/i/boohoo/gzz27719_grey_xl/womens-grey-disney-mickey-mouse-button-up-pyjama-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img3": "https://media.boohoo.com/i/boohoo/gzz27719_grey_xl_2/female-grey-disney-mickey-mouse-button-up-pyjama-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "id": 16
+    },
+    {
+      "category": "male",
+      "title": "jeans",
+      "model": "FIXED WAIST TWILL MULTIPOCKET CARGO",
+      "description": "Give your jeans a day off with this pair of men's cargo pants from our latest collection. A trending style that we can't get enough of this season, this pair features utility-style cargo pocket detailing and a relaxed fit perfect for off-duty plans. Wear with an oversized tee and classic trainers for a cool casual look we're absolutely here for.  100% cotton. Model is 6'1 and wears size M/32R",
+      "price": 203000,
+      "img1": "https://media.boohoo.com/i/boohoo/bmm06631_stone_xl/mens-stone-fixed-waist-twill-multipocket-cargo-?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img2": "https://media.boohoo.com/i/boohoo/bmm06631_stone_xl_1/male-stone-fixed-waist-twill-multipocket-cargo-?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img3": "https://media.boohoo.com/i/boohoo/bmm06631_stone_xl_3/male-stone-fixed-waist-twill-multipocket-cargo-?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "id": 17
+    },
+    {
+      "category": "male",
+      "title": "jeans",
+      "model": "FIXED WAIST TWILL MULTIPOCKET CARGO",
+      "description": "Give your jeans a day off with this pair of men's cargo pants from our latest collection. A trending style that we can't get enough of this season, this pair features utility-style cargo pocket detailing and a relaxed fit perfect for off-duty plans. Wear with an oversized tee and classic trainers for a cool casual look we're absolutely here for.  100% cotton. Model is 6'1 and wears size M/32R",
+      "price": 20450,
+      "img1": "https://media.boohoo.com/i/boohoo/gzz27719_grey_xl_1/female-grey-disney-mickey-mouse-button-up-pyjama-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img2": "https://media.boohoo.com/i/boohoo/gzz27719_grey_xl/womens-grey-disney-mickey-mouse-button-up-pyjama-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "img3": "https://media.boohoo.com/i/boohoo/gzz27719_grey_xl_2/female-grey-disney-mickey-mouse-button-up-pyjama-trouser-set?w=450&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+      "id": 18
+    },
+    {
+      "category": "femail",
+      "title": "dejhhdhfdhdf",
+      "model": "bdddhdh",
+      "description": "djddhh",
+      "price": 27727,
+      "img1": "nbdbddb",
+      "img2": "bdbdbdb",
+      "img3": "dbdbdbdbd",
+      "id": 19
     }
   ]
 }

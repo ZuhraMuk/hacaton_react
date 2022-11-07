@@ -1,13 +1,28 @@
-import { Grid } from "@mui/material";
-import React, { useContext, useEffect } from "react";
+import { Grid, Pagination } from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { productContext } from "../../../context/ProductContextProvider";
 import ProductCard from "../ProductCard/ProductCard";
 
 const ProductsList = () => {
-  const { productsArr, readProduct } = useContext(productContext);
+  const { productsArr, readProduct, pageTotalCount } =
+    useContext(productContext);
+
+  const [paramsSearch, setParamsSearch] = useSearchParams();
+
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    setParamsSearch({
+      _page: page,
+      _limit: 9,
+      q: paramsSearch.get("q") || "",
+    });
+  }, [paramsSearch, page]);
+
   useEffect(() => {
     readProduct();
-  }, []);
+  }, [paramsSearch, pageTotalCount]);
   return (
     <>
       <Grid
@@ -25,6 +40,17 @@ const ProductsList = () => {
               </Grid>
             ))
           : null}
+      </Grid>
+      <Grid
+        sx={{ width: "30%", display: "flex", justifyContent: "center" }}
+        mx="auto"
+        my="20px">
+        <Pagination
+          count={+pageTotalCount}
+          color="secondary"
+          page={+page}
+          onChange={(e, value) => setPage(value)}
+        />
       </Grid>
     </>
   );

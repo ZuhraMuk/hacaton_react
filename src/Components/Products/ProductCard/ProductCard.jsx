@@ -35,13 +35,13 @@ const ProductCard = ({ obj }) => {
   function avatar() {
     switch (obj.category[0]) {
       case "f":
-        return "red";
+        return "#38B8FB";
 
       case "m":
-        return "blue";
+        return "#80EDFD";
 
       default:
-        return "green";
+        return "#5F74FB";
     }
   }
 
