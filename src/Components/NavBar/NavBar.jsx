@@ -17,11 +17,14 @@ import Button from "@mui/material/Button";
 import SortIcon from "@mui/icons-material/Sort";
 import { Link, useLocation } from "react-router-dom";
 import { basketContext } from "../../context/BasketContextProvider";
+import { authContext } from "../../context/AuthContextProvider";
 
 function NavBar() {
   const location = useLocation();
 
   const { basketCount } = React.useContext(basketContext);
+
+  const { user, handleLogout } = React.useContext(authContext);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -49,6 +52,7 @@ function NavBar() {
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
+      style={{ width: "300px" }}
       anchorEl={anchorEl}
       anchorOrigin={{
         vertical: "top",
@@ -62,8 +66,10 @@ function NavBar() {
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}>
-      <MenuItem>LogIn</MenuItem>
-      <MenuItem>LogOut</MenuItem>
+      <Link to="/auth" style={{ color: "black" }}>
+        <MenuItem>LogIn</MenuItem>
+      </Link>
+      <MenuItem onClick={handleLogout}>LogOut</MenuItem>
     </Menu>
   );
 
@@ -182,8 +188,12 @@ function NavBar() {
             )}
             {/* <Link to="/list">Products List</Link> */}
           </Box>
+
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Typography>
+              {user.email ? user.email : <span>Users</span>}
+            </Typography>
             <Link to="/basket">
               <IconButton
                 size="large"

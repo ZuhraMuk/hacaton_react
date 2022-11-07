@@ -8,20 +8,18 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const Filter = () => {
+const Filter = ({ category, setCategory, price, setPrice }) => {
   return (
     <FormControl>
-      <FormLabel id="demo-radio-buttons-group-label">По категориям</FormLabel>
+      <FormLabel id="demo-radio-buttons-group-label">Category</FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         defaultValue="all"
         name="radio-buttons-group"
-        // value={category}
-        value="category"
-        // onChange={(e) => setCategory(e.target.value)}
-      >
+        value={category}
+        onChange={e => setCategory(e.target.value)}>
         <FormControlLabel value="femail" control={<Radio />} label="Femail" />
-        <FormControlLabel value="Male" control={<Radio />} label="Male" />
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
         <FormControlLabel
           value="childrens"
           control={<Radio />}
@@ -32,9 +30,8 @@ const Filter = () => {
       <FormLabel id="demo-radio-buttons-group-label">By prices</FormLabel>
       <Slider
         getAriaLabel={() => "Temperature range"}
-        value="price"
-        // value={price}
-        // onChange={(e) => setPrice(e.target.value)}
+        value={price}
+        onChange={e => setPrice(e.target.value)}
         valueLabelDisplay="auto"
         min={0}
         max={200000}

@@ -41,7 +41,6 @@ const AddProduct = () => {
   const [title, setTitle] = useState("");
   const [model, setModel] = useState("");
   const [description, setDescription] = useState("");
-  const [color, setColor] = useState("");
   const [price, setPrice] = useState(0);
   const [img1, setImg1] = useState("");
   const [img2, setImg2] = useState("");
@@ -54,12 +53,12 @@ const AddProduct = () => {
       !title.trim() ||
       !model.trim() ||
       !description.trim() ||
-      !price.trim() ||
+      !price ||
       !img1.trim() ||
       !img2.trim() ||
       !img3.trim()
     ) {
-      alert("Заполните все поля!");
+      alert("Fill in all the fields!");
       return;
     }
 
@@ -78,7 +77,6 @@ const AddProduct = () => {
     setTitle("");
     setModel("");
     setDescription("");
-    setColor("");
     setPrice(0);
     setImg1("");
     setImg2("");
