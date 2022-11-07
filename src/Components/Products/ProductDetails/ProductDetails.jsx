@@ -99,10 +99,12 @@ const ProductDetails = () => {
                     display: "flex",
                     alignItems: "center",
                   }}>
-                  Цена: {productDetails.price} сом
-                  <Button variant="contained" sx={{ marginLeft: "20px" }}>
-                    Купить
-                  </Button>
+                  Цена: {productDetails.price} som
+                  <Link to="/buy">
+                    <Button variant="contained" sx={{ marginLeft: "20px" }}>
+                      Buy
+                    </Button>
+                  </Link>
                   <Button
                     variant="contained"
                     color="warning"

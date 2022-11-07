@@ -4,6 +4,7 @@ import AddProduct from "./Components/Admin/AddProduct/AddProduct";
 import EditProduct from "./Components/Admin/EditProduct/EditProduct";
 import Basket from "./Components/Basket/Basket";
 import HomePage from "./Components/HomePage/HomePage";
+import PaymentPage from "./Components/PaymentPage/PaymentPage";
 import ProductDetails from "./Components/Products/ProductDetails/ProductDetails";
 import ProductsList from "./Components/Products/ProductsList/ProductsList";
 
@@ -16,6 +17,7 @@ const MainRoutes = () => {
       <Route path="/basket" element={<Basket />} />
       <Route path="/details/:id" element={<ProductDetails />} />
       <Route path="/edit/:id" element={<EditProduct />} />
+      <Route path="/buy" element={<PaymentPage />} />
     </Routes>
   );
 };
