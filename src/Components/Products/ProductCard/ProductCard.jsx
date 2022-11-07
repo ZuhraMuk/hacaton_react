@@ -11,15 +11,26 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { blue } from "@mui/material/colors";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { basketContext } from "../../../context/BasketContextProvider";
+import ShoppingCartSharpIcon from "@mui/icons-material/ShoppingCartSharp";
 
 const ProductCard = ({ obj }) => {
   const { addProductToBasket } = React.useContext(basketContext);
+  const [basket, setBasket] = React.useState(false);
+
+  React.useEffect(() => {
+    let basket = JSON.parse(localStorage.getItem("basket"));
+    basket.products.forEach(elem => {
+      if (elem.item.id === obj.id) {
+        setBasket(true);
+      }
+    });
+  }, []);
 
   function avatar() {
     switch (obj.category[0]) {
@@ -67,9 +78,25 @@ const ProductCard = ({ obj }) => {
         <IconButton aria-label="add to favorites">
           <BookmarkBorderIcon />
         </IconButton>
-        <IconButton aria-label="share" onClick={() => addProductToBasket(obj)}>
-          <AddShoppingCartIcon />
-        </IconButton>
+        {basket ? (
+          <IconButton
+            aria-label="share"
+            onClick={() => {
+              addProductToBasket(obj);
+              setBasket(!basket);
+            }}>
+            <ShoppingCartSharpIcon />
+          </IconButton>
+        ) : (
+          <IconButton
+            aria-label="share"
+            onClick={() => {
+              addProductToBasket(obj);
+              setBasket(!basket);
+            }}>
+            <ShoppingCartOutlinedIcon />
+          </IconButton>
+        )}
       </CardActions>
     </Card>
   );

@@ -11,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import LiveSearch from "../LiveSearch/LiveSearch";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import Button from "@mui/material/Button";
 import SortIcon from "@mui/icons-material/Sort";
@@ -90,7 +90,7 @@ function NavBar() {
             aria-label="show 4 new mails"
             color="inherit">
             <Badge badgeContent={basketCount} color="error">
-              <AddShoppingCartIcon />
+              <ShoppingCartOutlinedIcon />
             </Badge>
           </IconButton>
           <p>my cart</p>
@@ -190,7 +190,7 @@ function NavBar() {
                 aria-label="show 4 new mails"
                 color="inherit">
                 <Badge badgeContent={basketCount} color="error">
-                  <AddShoppingCartIcon />
+                  <ShoppingCartOutlinedIcon />
                 </Badge>
               </IconButton>
             </Link>
