@@ -25,11 +25,13 @@ const ProductCard = ({ obj }) => {
 
   React.useEffect(() => {
     let basket = JSON.parse(localStorage.getItem("basket"));
-    basket.products.forEach(elem => {
-      if (elem.item.id === obj.id) {
-        setBasket(true);
-      }
-    });
+    if (basket !== null) {
+      basket.products.forEach(elem => {
+        if (elem.item.id === obj.id) {
+          setBasket(true);
+        }
+      });
+    }
   }, []);
 
   function avatar() {
