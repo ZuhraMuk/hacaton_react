@@ -2,11 +2,13 @@ import { Diversity1 } from "@mui/icons-material";
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import "./HomePage.css";
+import logo from "../Logo/logo.png";
 
 const HomePage = () => {
   return (
     <>
       <div className="content">
+        <img src={logo} alt="logo" style={{ width: 100, margin: "10px" }} />
         <div className="homeContent">
           <div
             style={{

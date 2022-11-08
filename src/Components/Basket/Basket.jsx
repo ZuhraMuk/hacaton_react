@@ -36,7 +36,7 @@ const Basket = () => {
         {productsInBasket ? (
           <>
             <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 650 }}>
+              <Table>
                 <TableHead>
                   <TableRow>
                     <TableCell sx={{ fontWeight: "bold" }}>Title</TableCell>
