@@ -154,18 +154,41 @@ function NavBar() {
           </IconButton>
           <Menu
             id="basic-menu"
+            sx={{ color: "black" }}
             anchorEl={anchorEl2}
             open={open}
             onClose={handleClose}
             MenuListProps={{
               "aria-labelledby": "basic-button",
             }}>
-            <Typography sx={{ fontSize: 17, fontWeight: 550 }}>
-              Filter
-            </Typography>
-            <MenuItem onClick={handleClose}>Femail</MenuItem>
-            <MenuItem onClick={handleClose}>Male</MenuItem>
-            <MenuItem onClick={handleClose}>Childrens</MenuItem>
+            <Link to="/">
+              <MenuItem onClick={handleClose} style={{ color: "black" }}>
+                Home
+              </MenuItem>
+            </Link>
+            {user.email === "zuhra@mail.ru" ? (
+              <Link to="/add">
+                <MenuItem onClick={handleClose} style={{ color: "black" }}>
+                  Add Products
+                </MenuItem>
+              </Link>
+            ) : null}
+            {location.pathname === "/list" ? (
+              <MenuItem onClick={handleClose} style={{ color: "black" }}>
+                <span style={{ cursor: "pointer" }}>Products List</span>
+              </MenuItem>
+            ) : (
+              <Link to="/list">
+                <MenuItem onClick={handleClose} style={{ color: "black" }}>
+                  Products List
+                </MenuItem>
+              </Link>
+            )}
+            <MenuItem onClick={handleClose} style={{ color: "black" }}>
+              <Typography>
+                {user.email ? user.email : <span>Users</span>}
+              </Typography>
+            </MenuItem>
           </Menu>
           <Typography
             variant="h6"
@@ -176,6 +199,7 @@ function NavBar() {
           </Typography>
           {location.pathname == "/list" ? <LiveSearch /> : null}
           <Box
+            id="NavBar"
             sx={{
               display: "flex",
               width: "50%",

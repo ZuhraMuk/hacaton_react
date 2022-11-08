@@ -37,19 +37,19 @@ const ProductCard = ({ obj }) => {
   function avatar() {
     switch (obj.category[0]) {
       case "f":
-        return "#38B8FB";
+        return "#86A8E7";
 
       case "m":
-        return "#80EDFD";
+        return "#5FFBF1";
 
       default:
-        return "#5F74FB";
+        return "#E7BBD4";
     }
   }
 
   return (
     <div
-      style={{ maxWidth: 300, minWidth: 280, margin: "5px" }}
+      style={{ maxWidth: 300, minWidth: 260, margin: "5px" }}
       id="card_active">
       <CardHeader
         avatar={

@@ -16,3 +16,17 @@
   flex-wrap: wrap;
   margin: 10px 0 10px 0;
 }
+#homeImg {
+  width: 500px;
+  height: 450px;
+}
+
+@media all and (max-width: 510px) {
+  #homeImg {
+    width: 99%;
+    height: auto;
+  }
+  #homeText {
+    width: 300px;
+  }
+}

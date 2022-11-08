@@ -10,7 +10,7 @@ import React from "react";
 
 const Filter = ({ category, setCategory, price, setPrice }) => {
   return (
-    <FormControl>
+    <FormControl sx={{ width: "200px" }}>
       <FormLabel id="demo-radio-buttons-group-label">Category</FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"

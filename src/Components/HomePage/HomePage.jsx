@@ -97,10 +97,10 @@ const HomePage = () => {
         <div className="homeContent">
           <img
             src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEYXXX1799.jpg"
-            style={{ width: "500px" }}
-            height={450}
+            id="homeImg"
           />
           <div
+            id="homeText"
             style={{
               width: "500px",
               borderTop: "10px solid gray",
