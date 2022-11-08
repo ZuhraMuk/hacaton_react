@@ -48,7 +48,9 @@ const ProductCard = ({ obj }) => {
   }
 
   return (
-    <div style={{ maxWidth: 300, minWidth: 280 }} id="card_active">
+    <div
+      style={{ maxWidth: 300, minWidth: 280, margin: "5px" }}
+      id="card_active">
       <CardHeader
         avatar={
           <Avatar style={{ backgroundColor: avatar() }} aria-label="recipe">

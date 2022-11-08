@@ -21,7 +21,7 @@ const ProductsList = () => {
         price_lte: price[1],
         q: paramsSearch.get("q") || "",
         _page: page,
-        _limit: 8,
+        _limit: 9,
       });
     } else {
       setParamsSearch({
@@ -29,7 +29,7 @@ const ProductsList = () => {
         price_gte: price[0],
         price_lte: price[1],
         _page: page,
-        _limit: 8,
+        _limit: 9,
       });
     }
   }, [paramsSearch, category, price, page]);
