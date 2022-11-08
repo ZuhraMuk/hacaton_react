@@ -48,7 +48,7 @@ const ProductCard = ({ obj }) => {
   }
 
   return (
-    <Card sx={{ maxWidth: 300 }} id="card_active">
+    <div style={{ maxWidth: 300, minWidth: 280 }} id="card_active">
       <CardHeader
         avatar={
           <Avatar style={{ backgroundColor: avatar() }} aria-label="recipe">
@@ -100,7 +100,7 @@ const ProductCard = ({ obj }) => {
           </IconButton>
         )}
       </CardActions>
-    </Card>
+    </div>
   );
 };
 

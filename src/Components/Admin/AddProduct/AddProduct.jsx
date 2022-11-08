@@ -86,7 +86,10 @@ const AddProduct = () => {
   return (
     <>
       <h2 id="add-title">Add product</h2>
-      <form id="form-add" onSubmit={e => handleAdd(e)}>
+      <form
+        id="form-add"
+        onSubmit={e => handleAdd(e)}
+        style={{ minWidth: "300px" }}>
         <FormControl sx={{ m: 1 }}>
           <InputLabel id="demo-simple-select-autowidth-label">
             Category

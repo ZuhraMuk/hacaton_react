@@ -7,14 +7,6 @@ const HomePage = () => {
   return (
     <>
       <div className="content">
-        <div sx={{ display: { md: "flex", justifyContent: "center" } }}>
-          <img
-            src="https://shop.googlemerchandisestore.com/store/20160512512/assets/themes/theme1_en/images/logo2.png"
-            alt="pic"
-            width={155}
-            height={80}></img>
-        </div>
-
         <div className="homeContent">
           <div
             style={{

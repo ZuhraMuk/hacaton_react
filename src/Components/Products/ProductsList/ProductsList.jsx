@@ -21,7 +21,7 @@ const ProductsList = () => {
         price_lte: price[1],
         q: paramsSearch.get("q") || "",
         _page: page,
-        _limit: 9,
+        _limit: 8,
       });
     } else {
       setParamsSearch({
@@ -29,7 +29,7 @@ const ProductsList = () => {
         price_gte: price[0],
         price_lte: price[1],
         _page: page,
-        _limit: 9,
+        _limit: 8,
       });
     }
   }, [paramsSearch, category, price, page]);
@@ -57,11 +57,7 @@ const ProductsList = () => {
         mx="auto"
         my="40px">
         {productsArr
-          ? productsArr.map(item => (
-              <Grid item={true} xs={3.5} mb={7} key={item.id}>
-                <ProductCard obj={item} />
-              </Grid>
-            ))
+          ? productsArr.map(item => <ProductCard obj={item} />)
           : null}
       </Grid>
       <Grid

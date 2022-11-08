@@ -18,12 +18,12 @@ const Filter = ({ category, setCategory, price, setPrice }) => {
         name="radio-buttons-group"
         value={category}
         onChange={e => setCategory(e.target.value)}>
-        <FormControlLabel value="femail" control={<Radio />} label="Femail" />
+        <FormControlLabel value="femail" control={<Radio />} label="Female" />
         <FormControlLabel value="male" control={<Radio />} label="Male" />
         <FormControlLabel
           value="childrens"
           control={<Radio />}
-          label="Childrens"
+          label="Children"
         />
         <FormControlLabel value="all" control={<Radio />} label="All" />
       </RadioGroup>

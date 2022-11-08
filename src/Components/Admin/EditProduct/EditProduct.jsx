@@ -23,10 +23,18 @@ const EditProduct = () => {
   }, [id]);
 
   function handleChange(e) {
-    let obj = {
-      ...inpValues,
-      [e.target.name]: e.target.value,
-    };
+    let obj = {};
+    if (e.target.name == "price") {
+      obj = {
+        ...inpValues,
+        [e.target.name]: +e.target.value,
+      };
+    } else {
+      obj = {
+        ...inpValues,
+        [e.target.name]: e.target.value,
+      };
+    }
     setInpValues(obj);
   }
 
@@ -54,7 +62,10 @@ const EditProduct = () => {
   return (
     <>
       <h2 id="add-title">Product editing</h2>
-      <form id="form-add" onSubmit={e => handleSave(e)}>
+      <form
+        id="form-add"
+        onSubmit={e => handleSave(e)}
+        style={{ minWidth: "280px" }}>
         <FormControl sx={{ m: 1 }}>
           <InputLabel id="demo-simple-select-autowidth-label">
             Category

@@ -18,7 +18,10 @@ import "./ProductDetails.css";
 import SwiperCore, { Thumbs } from "swiper";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { AddShoppingCart } from "@mui/icons-material";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import ShoppingCartSharpIcon from "@mui/icons-material/ShoppingCartSharp";
 import { basketContext } from "../../../context/BasketContextProvider";
+import { authContext } from "../../../context/AuthContextProvider";
 
 SwiperCore.use([Thumbs]);
 
@@ -30,7 +33,24 @@ const ProductDetails = () => {
 
   const { addProductToBasket } = useContext(basketContext);
 
+  const { user } = useContext(authContext);
+
   const { id } = useParams();
+
+  const [basket, setBasket] = React.useState(false);
+
+  React.useEffect(() => {
+    let basket = JSON.parse(localStorage.getItem("basket"));
+    if (basket !== null) {
+      if (productDetails !== null) {
+        basket.products.forEach(elem => {
+          if (elem.item.id === productDetails.id) {
+            setBasket(true);
+          }
+        });
+      }
+    }
+  }, []);
 
   useEffect(() => {
     readOneProduct(id);
@@ -105,40 +125,54 @@ const ProductDetails = () => {
                       Buy
                     </Button>
                   </Link>
-                  <Button
-                    variant="contained"
-                    color="warning"
-                    sx={{ marginLeft: "20px" }}
-                    onClick={() => addProductToBasket(productDetails)}>
-                    <AddShoppingCart />
-                  </Button>
+                  {basket ? (
+                    <Button
+                      variant="contained"
+                      color="success"
+                      sx={{ marginLeft: "20px" }}
+                      onClick={() => {
+                        addProductToBasket(productDetails);
+                        setBasket(!basket);
+                      }}>
+                      <ShoppingCartSharpIcon />
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="contained"
+                      color="warning"
+                      sx={{ marginLeft: "20px" }}
+                      onClick={() => {
+                        addProductToBasket(productDetails);
+                        setBasket(!basket);
+                      }}>
+                      <ShoppingCartOutlinedIcon />
+                    </Button>
+                  )}
                 </Alert>
-                <Box
-                  sx={{
-                    mt: "15px",
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    sx={{ width: "48%" }}
-                    onClick={() => deleteProduct(productDetails.id)}>
-                    Delete
-                  </Button>
-                  {/* <Link
-                    to={`/edit/${productDetails.id}`}
-                    style={{ width: "50%" }}
-                  > */}
-                  <Button
-                    variant="contained"
-                    color="warning"
-                    sx={{ width: "48%" }}
-                    onClick={() => navigate(`/edit/${productDetails.id}`)}>
-                    Edit
-                  </Button>
-                  {/* </Link> */}
-                </Box>
+                {user.email === "zuhra@mail.ru" ? (
+                  <Box
+                    sx={{
+                      mt: "15px",
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      sx={{ width: "48%" }}
+                      onClick={() => deleteProduct(productDetails.id)}>
+                      Delete
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="warning"
+                      sx={{ width: "48%" }}
+                      onClick={() => navigate(`/edit/${productDetails.id}`)}>
+                      Edit
+                    </Button>
+                    {/* </Link> */}
+                  </Box>
+                ) : null}
               </Paper>
             </Grid>
           </Grid>

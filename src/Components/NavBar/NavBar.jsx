@@ -15,9 +15,10 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import Button from "@mui/material/Button";
 import SortIcon from "@mui/icons-material/Sort";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { basketContext } from "../../context/BasketContextProvider";
 import { authContext } from "../../context/AuthContextProvider";
+import "./NavBar.css";
 
 function NavBar() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function NavBar() {
   const { basketCount } = React.useContext(basketContext);
 
   const { user, handleLogout } = React.useContext(authContext);
+  console.log(user);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -179,21 +181,26 @@ function NavBar() {
               width: "50%",
               justifyContent: "space-around",
             }}>
-            <Link to="/">Home</Link>
-            <Link to="/add">Add Products</Link>
+            <NavLink to="/">Home</NavLink>
+            {user.email === "zuhra@mail.ru" ? (
+              <NavLink to="/add">Add Products</NavLink>
+            ) : null}
+
             {location.pathname === "/list" ? (
-              <span style={{ cursor: "pointer" }}>Products List</span>
+              <span style={{ cursor: "pointer" }} className="active">
+                Products List
+              </span>
             ) : (
-              <Link to="/list">Products List</Link>
+              <NavLink to="/list">Products List</NavLink>
             )}
             {/* <Link to="/list">Products List</Link> */}
+            <Typography>
+              {user.email ? user.email : <span>Users</span>}
+            </Typography>
           </Box>
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <Typography>
-              {user.email ? user.email : <span>Users</span>}
-            </Typography>
             <Link to="/basket">
               <IconButton
                 size="large"
