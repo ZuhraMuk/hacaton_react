@@ -71,7 +71,7 @@ const ProductDetails = () => {
                 className="mySwiper2"
                 spaceBetween={10}
                 thumbs={{ swiper: thumbsSwiper }}
-                style={{ maxHeight: "700px" }}>
+                style={{ maxHeight: "600px" }}>
                 <SwiperSlide>
                   <img src={productDetails.img1} alt={productDetails.title} />
                 </SwiperSlide>

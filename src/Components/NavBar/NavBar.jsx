@@ -12,7 +12,6 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import LiveSearch from "../LiveSearch/LiveSearch";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import Button from "@mui/material/Button";
 import SortIcon from "@mui/icons-material/Sort";
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -104,14 +103,7 @@ function NavBar() {
           <p>my cart</p>
         </MenuItem>
       </Link>
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <BookmarkBorderIcon />
-          </Badge>
-        </IconButton>
-        <p>my favorites</p>
-      </MenuItem>
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -235,14 +227,7 @@ function NavBar() {
                 </Badge>
               </IconButton>
             </Link>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit">
-              <Badge badgeContent={17} color="error">
-                <BookmarkBorderIcon />
-              </Badge>
-            </IconButton>
+
             <IconButton
               size="large"
               edge="end"

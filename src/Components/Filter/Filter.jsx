@@ -10,14 +10,21 @@ import React from "react";
 
 const Filter = ({ category, setCategory, price, setPrice }) => {
   return (
-    <FormControl sx={{ width: "200px" }}>
+    <FormControl sx={{ width: "250px" }}>
       <FormLabel id="demo-radio-buttons-group-label">Category</FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         defaultValue="all"
         name="radio-buttons-group"
         value={category}
-        onChange={e => setCategory(e.target.value)}>
+        onChange={e => setCategory(e.target.value)}
+        sx={{
+          width: "250px",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}>
         <FormControlLabel value="femail" control={<Radio />} label="Female" />
         <FormControlLabel value="male" control={<Radio />} label="Male" />
         <FormControlLabel

@@ -10,10 +10,8 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { blue } from "@mui/material/colors";
-import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import LoupeIcon from "@mui/icons-material/Loupe";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
@@ -80,15 +78,20 @@ const ProductCard = ({ obj }) => {
           {obj.description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      <CardActions
+        disableSpacing
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}>
         <Link to="/buy">
           <Button variant="contained" sx={{ marginLeft: "20px" }}>
             Buy
           </Button>
         </Link>
-        <IconButton aria-label="add to favorites">
-          <BookmarkBorderIcon />
-        </IconButton>
+
         {basket ? (
           <IconButton
             aria-label="share"
