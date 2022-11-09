@@ -13,7 +13,8 @@ import { blue } from "@mui/material/colors";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import ZoomInIcon from "@mui/icons-material/ZoomIn";
+import LoupeIcon from "@mui/icons-material/Loupe";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { basketContext } from "../../../context/BasketContextProvider";
@@ -61,7 +62,7 @@ const ProductCard = ({ obj }) => {
         action={
           <Link to={`/details/${obj.id}`}>
             <IconButton aria-label="settings">
-              <MoreVertIcon />
+              <LoupeIcon />
             </IconButton>
           </Link>
         }
