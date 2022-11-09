@@ -18,6 +18,7 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { basketContext } from "../../../context/BasketContextProvider";
 import ShoppingCartSharpIcon from "@mui/icons-material/ShoppingCartSharp";
+import { Button } from "@mui/material";
 
 const ProductCard = ({ obj }) => {
   const { addProductToBasket } = React.useContext(basketContext);
@@ -79,6 +80,11 @@ const ProductCard = ({ obj }) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
+        <Link to="/buy">
+          <Button variant="contained" sx={{ marginLeft: "20px" }}>
+            Buy
+          </Button>
+        </Link>
         <IconButton aria-label="add to favorites">
           <BookmarkBorderIcon />
         </IconButton>

@@ -28,6 +28,7 @@ const ProductsList = () => {
         category: category,
         price_gte: price[0],
         price_lte: price[1],
+        q: paramsSearch.get("q") || "",
         _page: page,
         _limit: 9,
       });

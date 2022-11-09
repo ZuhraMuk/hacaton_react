@@ -17,7 +17,6 @@ import "swiper/swiper.min.css";
 import "./ProductDetails.css";
 import SwiperCore, { Thumbs } from "swiper";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import { AddShoppingCart } from "@mui/icons-material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ShoppingCartSharpIcon from "@mui/icons-material/ShoppingCartSharp";
 import { basketContext } from "../../../context/BasketContextProvider";
@@ -61,13 +60,18 @@ const ProductDetails = () => {
   return (
     <>
       {productDetails ? (
-        <Container sx={{ marginTop: "40px" }}>
+        <Container
+          sx={{
+            marginTop: "40px",
+            marginBottom: "10px",
+          }}>
           <Grid container spacing={2}>
-            <Grid item xs={6}>
+            <Grid item xs={7} mx="auto">
               <Swiper
                 className="mySwiper2"
                 spaceBetween={10}
-                thumbs={{ swiper: thumbsSwiper }}>
+                thumbs={{ swiper: thumbsSwiper }}
+                style={{ maxHeight: "700px" }}>
                 <SwiperSlide>
                   <img src={productDetails.img1} alt={productDetails.title} />
                 </SwiperSlide>
@@ -102,10 +106,12 @@ const ProductDetails = () => {
                 </SwiperSlide>
               </Swiper>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={10} mx="auto">
               <Paper elevation={3} sx={{ padding: "10px", marginTop: "40px" }}>
-                <Typography variant="h4">{productDetails.title}</Typography>
-                <Typography variant="h5">{productDetails.model}</Typography>
+                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                  {productDetails.title}
+                </Typography>
+                <Typography variant="h6">{productDetails.model}</Typography>
                 <hr />
                 <Typography sx={{ marginTop: "30px" }}>
                   {productDetails.description}
@@ -113,13 +119,13 @@ const ProductDetails = () => {
                 <Alert
                   icon={<AttachMoneyIcon />}
                   sx={{
-                    fontSize: "25px",
+                    fontSize: "20px",
                     fontWeight: 700,
                     mt: "20px",
                     display: "flex",
                     alignItems: "center",
                   }}>
-                  Цена: {productDetails.price} som
+                  Price: {productDetails.price} £
                   <Link to="/buy">
                     <Button variant="contained" sx={{ marginLeft: "20px" }}>
                       Buy

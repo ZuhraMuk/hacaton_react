@@ -67,7 +67,7 @@ const Basket = () => {
                           }
                         />
                       </TableCell>
-                      <TableCell>{elem.subPrice} сом</TableCell>
+                      <TableCell>{elem.subPrice} £</TableCell>
                       <TableCell
                         onClick={() => deleteBasketProduct(elem.item.id)}>
                         <DeleteForeverIcon className="deleteIconBasket" />
